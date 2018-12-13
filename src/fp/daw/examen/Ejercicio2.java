@@ -1,5 +1,7 @@
 package fp.daw.examen;
 
+import java.util.Random;
+
 public class Ejercicio2 {
 
 	/* 
@@ -13,7 +15,22 @@ public class Ejercicio2 {
 	 *  
 	 */
 	
-	public static ...
+	public static int busquedaBinaria(int vector[], int cadena){
+		 int i = 0;
+		  int f = vector.length - 1;
+		  int p = 0;
+		   while(i <= f){
+		     p = (i+f)/2;
+		     if ( vector[p] == cadena )
+		         return p;
+		       else if ( vector[p] < cadena ) {
+		    i = p+1;
+		       } else {
+		    f = p-1;
+		       }
+		 }
+		return -1;
+	}
 	
 	
 	/*
@@ -31,8 +48,9 @@ public class Ejercicio2 {
 	 * 
 	 */
 	
+	
+	
 	public static void main(String[] args) {
-		
 		
 	}
 

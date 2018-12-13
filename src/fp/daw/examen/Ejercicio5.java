@@ -1,5 +1,10 @@
 package fp.daw.examen;
 
+import java.util.Random;
+import java.util.Scanner;
+
+
+
 public class Ejercicio5 {
 
 	/* 
@@ -17,7 +22,46 @@ public class Ejercicio5 {
 	
 	public static void main(String[] args) {
 		
-
+		Scanner a = new Scanner(System.in);
+		Random r = new Random();
+			int adivinar = r.nextInt(100);
+			int aleatorio = 0;
+			int i = 0;
+			do {			
+				do {
+			System.out.println("Introduce un número aleatorio");
+			 aleatorio = a.nextInt();
+			if (aleatorio <= 0)
+				System.out.println("Cantidad Incorrecta. Vuelve a introducirla");	
+				} while(aleatorio != 0);
+				
+			 while (adivinar != aleatorio); 
+			 
+				if (adivinar == aleatorio) {
+					System.out.println("El número " + aleatorio + " es correcto.");
+				} 
+				if (adivinar >= aleatorio) {
+					System.out.println("El número " + aleatorio + " es mayor.");
+				} 
+				if (adivinar <= aleatorio) {
+					System.out.println("El número " + aleatorio + " es menor.");
+				} 
+				
+				System.out.println("¿Deseas realizar otro desglose? (S/N) ");			
+				} while (a.next().toLowerCase().equals("s"));
+			
 	}
 
 }
+	
+
+					
+	
+
+	
+
+			
+	
+
+
+
